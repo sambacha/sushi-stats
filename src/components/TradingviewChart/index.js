@@ -129,7 +129,7 @@ const TradingViewChart = ({
       var series =
         type === CHART_TYPES.BAR
           ? chart.addHistogramSeries({
-              color: '#ff007a',
+              color: '#705240',
               priceFormat: {
                 type: 'volume',
               },
@@ -171,7 +171,9 @@ const TradingViewChart = ({
           }</div>` +
           `<div style="font-size: 22px; margin: 4px 0px; color:${textColor}" >` +
           formattedNum(base ?? 0, true) +
-          `<span style="margin-left: 10px; font-size: 16px; color: ${color};">${formattedPercentChange}</span>` +
+          (baseChange
+            ? `<span style="margin-left: 10px; font-size: 16px; color: ${color};">${formattedPercentChange}</span>`
+            : '') +
           '</div>'
       }
       setLastBarText()

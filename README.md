@@ -9,11 +9,13 @@ Analytics site for the [Uniswap Protocol](https://uniswap.org).
 ### To Start Development
 
 ###### Installing dependencies
+
 ```bash
 yarn
 ```
 
 ###### Running locally
+
 ```bash
 yarn start
 ```
